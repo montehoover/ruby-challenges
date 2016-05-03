@@ -35,11 +35,11 @@ def get_op
   op
 end
 
-##########################################
-## deposit: Gets user input for numbers. ##
-## Takes argument n to display to user  ##
-## which number this is.                ##
-##########################################
+###########################################
+## mod: Gets user input for amounts.     ##
+## Takes argument op to display to user  ##
+## which op this is.                     ##
+###########################################
 def mod(balance, op)
   op_str = op == 'dep' ? 'deposit' : 'withdraw' 
   checked = false
@@ -61,31 +61,10 @@ def mod(balance, op)
   return balance
 end
 
-#######################################
-## withdraw: Runs a given operation on ##
-## arguments x and y.                ##
-#######################################
-def withdraw
-  if op == 'add'
-    ans = x + y
-  elsif op == 'sub'
-    ans = x - y
-  elsif op == 'mult'
-    ans = x * y
-  elsif op == 'div'
-    begin
-      ans = x / y
-    rescue ZeroDivisionError
-      puts "Naughty, naughty, looks like you tried to divide by zero."
-    end
-  end
-  ans
-end
-
 
 #######################################
-## withdraw: Runs a given operation on ##
-## arguments x and y.                ##
+## run_op: Runs a given operation    ##
+##                                   ##
 #######################################
 def run_op(balance, op)
   if op == 'chk'
@@ -95,6 +74,7 @@ def run_op(balance, op)
   end
   return balance
 end
+
 
 ###########################
 ##       Main loop       ##

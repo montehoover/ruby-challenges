@@ -31,11 +31,11 @@ def get_op
   op
 end
 
-##########################################
-## get_op: Gets user input for numbers. ##
-## Takes argument n to display to user  ##
-## which number this is.                ##
-##########################################
+##############################################
+## get_num(n): Gets user input for numbers. ##
+## Takes argument n to display to user      ##
+## which number this is.                    ##
+##############################################
 def get_num(n)
   checked = false
   while not checked do
