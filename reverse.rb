@@ -23,6 +23,10 @@ while running do
   puts "Enter a word to reverse:"
   s = gets.chomp
   puts reverse s
+  puts "Press any key to go again or type 'exit' to quit:"
+  if gets.chomp == 'exit'
+    running = false
+  end
 end
 
 # def fizz_buzz(n)
